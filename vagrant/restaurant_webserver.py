@@ -59,7 +59,8 @@ class WebServerHandler(BaseHTTPRequestHandler):
                     output = "<html><body>"
                     output += "<h1>Delete %s?</h1>" % (myRestaurantQuery.name)
                     output += "<form method='POST' enctype='multipart/form-data' action='/restaurants/%s/delete'>" % (restaurantIDPath)
-                    output += "<input type='submit' value='Delete'> <input type='submit' value='Cancel'>"
+                    output += "<input type='submit' value='Delete'>"
+                    output += "<br><a href='/restaurants'>Cancel</a>"
                     output += "</form>"
                     output += "</body></html>"
                     self.wfile.write(output)
